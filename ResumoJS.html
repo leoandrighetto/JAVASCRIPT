@@ -9,6 +9,8 @@
     <h1 id="Variavel_1"></h1><br>
     <h1 id="Variavel_2"></h1><br>
 
+    <button onClick="mudar_nome()"> Personalizar Saudação</button>
+
     <script>    
 
         <!--DECLARAÇÃO E MANIPULAÇÃO DE VARIAVEIS-->
@@ -21,6 +23,11 @@
         variavel = "Leo Andrighetto"    //alteração
 
                 document.getElementById("Variavel_2").textContent = "Olá " + variavel
+
+        //declarando função
+        function mudar_nome(){
+                document.getElementById('mensagem_saudacao').textContent = "Olá, Leonardo"}
+
 
                 
     </script>
