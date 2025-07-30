@@ -8,7 +8,7 @@ function adicionarTarefa() {
     let valorTarefa  = pegarTarefa.value    
 
     //com o id do elemento no "documento html", exibi como texto
-    document.getElementById("mensagem").textContent = mensagem;  
+      
 
     //console.log(valorTarefa)          TESTE DE CONSOLE
 
@@ -22,9 +22,18 @@ function adicionarTarefa() {
     //o elemento LI recebe o conteúdo de texto do input valorTarefa
     novaTarefa.textContent = valorTarefa
 
+    if (valorTarefa.trim() === "" ){
+        alert ("O campo está vazio")
+    }else {
+        
+        document.getElementById("mensagem").textContent = mensagem;
+        //Pegamos o elemento ul do html e adicionamos o texto dentro da lista.
+        
+        listaTarefas.appendChild(novaTarefa)
 
-    //Pegamos o elemento ul do html e adicionamos o texto dentro da lista.
-    listaTarefas.appendChild(novaTarefa)
+        
+    }
+    
 
     //limpamos o input.
     pegarTarefa.value = ""
