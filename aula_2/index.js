@@ -47,7 +47,7 @@ import leitor from 'readline-sync';
 //  ||   ==  OR
 //  &&   ==  AND
 
-/// ===  == COMPARA TANTO O TIPO QUANTO O VALOR DE UM OBJETO
+/// ===  operador de identidade - retorna verdadeiro se o elemento comparado representa uma determinada condição.( e COMPARA TANTO O TIPO QUANTO O VALOR DE UM OBJETO)
     //exemplo: 
     //let a ='1.8';
     //let b = 1.8;
