@@ -1,10 +1,22 @@
+let lista2 = [1,2,3,4,5,6,6]
+
+//UTILIZAÇÃO DE filter()
 
 
-let lista = [2,6,5,5,5,5,4,2]
-let nova_lista = []
+//    UTILIZANDO ARROW FUNCTION
 
-for (let i of lista) if (i % 2 == 0) {
-    nova_lista.push(i);
-}
+let numeros_pares = lista2.filter((numero_da_vez) => numero_da_vez % 2 === 0);
+//                                 VARIAVEL
+//                                 que representa cada elemento do array.
 
-console.log(nova_lista)
+console.log(numeros_pares);
+
+// código cru
+
+
+//let numeros_pares = lista2.filter(function(i) 
+//      {return i % 2 === 0;
+  
+//      });
+
+//console.log(numeros_pares);
