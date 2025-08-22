@@ -1,22 +1,17 @@
-let lista2 = [1,2,3,4,5,6,6]
+let lista = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 
-//UTILIZAÇÃO DE filter()
+let somente_primos = lista.filter(function(elemento_da_lista) {
 
-
-//    UTILIZANDO ARROW FUNCTION
-
-let numeros_pares = lista2.filter((numero_da_vez) => numero_da_vez % 2 === 0);
-//                                 VARIAVEL
-//                                 que representa cada elemento do array.
-
-console.log(numeros_pares);
-
-// código cru
-
-
-//let numeros_pares = lista2.filter(function(i) 
-//      {return i % 2 === 0;
+  let contador = 0;
   
-//      });
+  for (let a = 1; a <= elemento_da_lista; a++) {
+    
+   if (elemento_da_lista % a === 0) {
+     contador ++;
+   } 
+  }
+    return contador === 2; // se o valor de contador for igual a 2, este numero irá para dentro da lista nova utilizando a função filter();
 
-//console.log(numeros_pares);
+});
+
+console.log(somente_primos);
