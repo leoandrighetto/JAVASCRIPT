@@ -1,4 +1,5 @@
 
+
 let lista = [2,6,5,5,5,5,4,2]
 let nova_lista = []
 
