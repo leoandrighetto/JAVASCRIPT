@@ -1,0 +1,19 @@
+// map: Converta um array de datas no formato "YYYY-MM-DD" para "DD/MM/YYYY".
+// Exemplo: ["2023-10-05", "2024-01-01"] → ["05/10/2023", "01/01/2024"]
+
+let l = ["2023-10-05", "2024-01-01"];
+
+let n_l = l.map (function(data) {
+  
+  let data1 = data.split('-');
+  
+  // return data1
+  
+  let data_com_barras = data1[2] + '/' + data1[1] + '/' + data1[0];
+  
+  return data_com_barras;
+  
+  
+});
+
+console.log(n_l);
