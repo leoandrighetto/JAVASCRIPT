@@ -49,8 +49,70 @@ console.log(pessoa1.atributo, pessoa1.atributo1, pessoa1.atributo2);
 
 //DECLARANDO OBJETOS SEM CLASSE:
 
-let obj = {nome: 'Leonardo', idade: 27, altura: 1.76, "Data de Nascimento": "20/02/1998"};
+let obj = { nome: 'Leonardo', idade: 27, altura: 1.76, "Data de Nascimento": "20/02/1998" };
 console.log("\n");
-console.log ("Nome: " + obj.nome + "\n" + "Idade: " + obj.idade + "\n" + "Altura: " + obj.altura);
+console.log("Nome: " + obj.nome + "\n" + "Idade: " + obj.idade + "\n" + "Altura: " + obj.altura);
 
-console.log("Data de Nascimento: "+ obj["Data de Nascimento"]);
+console.log("Data de Nascimento: " + obj["Data de Nascimento"]);
+
+let obj2 = obj;
+
+obj.nome = "Mudou nome";
+
+console.log(obj2.nome)
+
+let obj3 = { ...obj };
+
+console.log(obj3);
+
+let obj4 = { ...obj3, nome: 'LALALA' };
+
+console.log(obj4)
+
+function exibir(objeto) {
+
+    console.log(objeto.nome);
+}
+
+exibir(obj);
+
+let Callback_de_exibir = exibir;
+
+console.log(Callback_de_exibir);
+
+Callback_de_exibir(obj4);
+
+
+let exibirReverso = function () {
+    console.log(obj.altura + "-" + obj.nome);
+}
+
+exibirReverso(obj);
+
+///////////////////////////////////////////////////////
+//CALLBACK E ARROW FUNCTION
+
+function soma2(valor) {
+    return valor + 2;
+};
+
+function soma3(valor) {
+    return valor + 3;
+};
+
+function soma4(valor) {
+    return valor + 4;
+};
+
+let array = [1, 2, 3];
+
+function soma(lista, funcao) {
+    let novo_array = [];
+    for (let index = 0; index < array.length; index++) {
+        novo_array.push(funcao(array[index]));
+
+    } return novo_array;
+}
+
+console.log(soma(array, soma4));
+
