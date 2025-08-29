@@ -36,3 +36,15 @@ let novo_array = array.reduce((acumulador, valor) => acumulador * valor, 1
 );
 
 console.log(novo_array);
+
+
+// reduce: Concatene todas as strings de um array em uma única string.
+// Exemplo: ["Hello", " ", "World"] → "Hello World"
+
+let array = ["Hello", " ", "World"];
+
+let concatenado = array.reduce((ant,atual) => ant + atual);
+
+
+console.log(concatenado);
+
