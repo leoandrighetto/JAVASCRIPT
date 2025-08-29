@@ -54,16 +54,43 @@ console.log(primeiro_10);
 // find: Encontre a primeira string que começa com a letra "a" (case insensitive).
 // Exemplo: ["Apple", "banana", "Orange"] → "banana"
 
-let array1 = ["Apple", "banana", "Orange"];
+let array1 = ["Apple", "Banana", "Orange"];
 
-let primeira_a = array.find((string) => {return string.toLowcase == "a"})
+let primeira_a = array1.find((string) => {
+  
+  for (letra of string){
+    if (letra === "a"){
+      return string
+    }
+  }
+});
 
 console.log(primeira_a);
+
 
 
 // find: Encontre o primeiro objeto em um array com id igual a 2.
 // Exemplo: [{id: 1}, {id: 2}] → {id: 2}
 
+let array = [{id: 1}, {id: 2}];
+
+let id_2 = array.find((obj) =>
+
+  {return obj["id"] == 2}
+
+);
+
+console.log(id_2);
 
 // find: Encontre o primeiro número que é par e positivo.
 // Exemplo: [-4, 3, 8, -2] → 8
+
+let array = [-4, -2, -8, 4];
+
+let positivo = array.find((numero) => {
+  if ((numero > 0) && (numero % 2 === 0)){
+    return numero;
+  }
+});
+
+console.log(positivo);
