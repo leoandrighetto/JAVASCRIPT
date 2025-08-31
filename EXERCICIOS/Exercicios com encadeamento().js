@@ -61,27 +61,50 @@
 
 
 
-// Encadeamento: Filtre strings que começam com "A", mapeie para maiúsculas e verifique se todas têm pelo menos 5 letras.
-// Exemplo: ["apple", "Avocado", "Banana"] → ["APPLE", "AVOCADO"] → true
-
-// let array = ["apple", "Avocado", "Banana"];
-
-// let encadeamento = array.filter((str) => str.toLowerCase()[0] === "a").map((str) => str.toUpperCase()).every((str) => str.length >= 5 );
-
-// console.log(encadeamento);
+/* Encadeamento: Filtre strings que começam 
+com "A", mapeie para maiúsculas e 
+verifique se todas têm pelo menos 5 letras.
+Exemplo: ["apple", "Avocado", "Banana"]
+→ ["APPLE", "AVOCADO"] → true */
 
 
-// Encadeamento: Some todos os números usando reduce e verifique se a soma é par.
+/*let array = ["apple", "Avocado", "Banana"];
+
+
+let encadeamento = array.filter((str) => 
+  str.toLowerCase()[0] === "a").map((str) => 
+  str.toUpperCase()).every((str) => 
+  str.length >= 5 );
+
+
+console.log(encadeamento);*/
+
+
+// Encadeamento: Some todos os números usando
+// reduce e verifique se a soma é par.
 // Exemplo: [1, 2, 3] → 6 → true
 
 
-let array = [1, 2, 3];
+/*let array = [1, 2, 3];
 
-let encadeamento = array.reduce((an,at) => (an + at) & );
+let encadeamento = array.reduce((an,at) => 
+  an + at, 0) % 2 === 0;
+  
+console.log(encadeamento);*/
+
+
+// Encadeamento: Filtre números menores que 
+//50, mapeie para suas raízes quadradas 
+//e calcule o produto.
+// Exemplo: [16, 49, 64] → [4, 7, 8] →
+//4 * 7 * 8 = 224
+
+let array = [16, 49, 64];
+
+let encadeamento = array.filter((num) => 
+num <= 100).map((num) => num ** 0.5 ).reduce((a,n) =>
+ a*=n);
 
 console.log(encadeamento);
 
-
-// Encadeamento: Filtre números menores que 50, mapeie para suas raízes quadradas e calcule o produto.
-// Exemplo: [16, 49, 64] → [4, 7, 8] → 4 * 7 * 8 = 224
 
