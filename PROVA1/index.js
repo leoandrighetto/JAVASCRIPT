@@ -9,7 +9,7 @@ async function criarNovaConsulta() {
 
     while (!nome) { nome = await input({ message: "Nome: " }) }
 
-    while ((!idade) && (isNaN(idade))) { idade = await input({ message: "Idade: " }) }
+    while ((!idade) || (isNaN(idade))) { idade = await input({ message: "Idade: " }) }
 
     let id_especialidade = '';
 
@@ -294,3 +294,4 @@ while (opcoes != "Sair") {
             break;
     }
 }
+
